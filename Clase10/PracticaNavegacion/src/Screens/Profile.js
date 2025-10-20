@@ -10,7 +10,7 @@ function Profile (props) {
     return (
         <View >
         <Text style= {style.titulo}>"Profile"</Text>
-        <Pressable onPress = {() => props.navigation.navigate('Login' )}>
+        <Pressable onPress = {() => this.props.navigation.navigate('Login' )}>
                  <Text style= {style.texto}>Desloguearse </Text>
                  </Pressable>
         </View>
@@ -23,12 +23,14 @@ let style = StyleSheet.create({
         marginLeft:10
     },
     texto: {
-        backgroundColor: "green",
+        backgroundColor: "#28a745",
         textAlign: "center",
         width: "50%",
         height: 40,
         marginTop: 20,
-        marginLeft: 10
+        paddingTop: 10,
+        marginLeft: 10,
+        borderRadius: 4
 
     }
     

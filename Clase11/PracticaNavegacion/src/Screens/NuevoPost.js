@@ -16,16 +16,13 @@ class NuevoPost extends Component  {
 
 onSubmit(){
    
-    
-   
-
-        
         this.setState({registered: true});
         this.props.navigation.navigate('Profile' )
         db.collection('posts').add({
-
+            owner: auth.currentUser.email,
             mensaje: this.state.mensaje,
             createdAt: Date.now(),
+            likes: []
         })
         .then (res =>{
             console.log(res);
